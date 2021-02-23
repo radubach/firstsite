@@ -4,9 +4,9 @@ author: DS Master
 date: '2021-02-23'
 slug: pieplot
 categories:
-  - R
+  - ["R"]
 tags:
-  - R Markdown
+  - ["R Markdown"]
 ---
 
 ```{r setup, include=FALSE}
