@@ -4,9 +4,9 @@ author: DS Master
 date: '2021-02-22'
 slug: test-new-post
 categories:
-  - R
+  - ["R"]
 tags:
-  - R Markdown
+  - ["R Markdown"]
 ---
 
 
