@@ -1,0 +1,19 @@
+---
+title: Test new post
+author: DS Master
+date: '2021-02-22'
+slug: test-new-post
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Test new post
+
+Testing the RStudio Addin for new posts in blogdown

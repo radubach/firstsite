@@ -1,0 +1,77 @@
+---
+title: Pie plot
+author: DS Master
+date: '2021-02-23'
+slug: pieplot
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+
+df <- tribble(
+  ~Team,
+  "Lakers",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics",
+  "Celtics"
+)
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+df %>%
+  group_by(Team) %>%
+  summarise(val = length(Team)) %>%
+ggplot(aes(x = "", fill = Team, y = val)) +
+  geom_bar(width = 1, stat = "identity") +
+  coord_polar("y",start = 0) +
+  scale_fill_manual(values=c("#008348", "#fdb927")) +
+  theme_bw() +
+  ggtitle("Who is better?") +
+  ylab("") +
+  xlab("") +
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank())
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
